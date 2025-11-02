@@ -2,25 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome | Tulsiram Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Scientific Portfolio</title>
+
+  <style>
+    /* === GLOBAL STYLES === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: radial-gradient(circle at bottom, #0a0a2a, #000);
+      overflow-x: hidden;
+      color: white;
+    }
+
+    /* === BACKGROUND ANIMATION === */
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      animation: moveStars 60s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 5000px; }
+    }
+
+    /* === HEADER === */
+    header {
+      position: relative;
+      text-align: center;
+      padding: 60px 20px;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #64ffda;
+      text-shadow: 0 0 15px #64ffda;
+    }
+
+    header p {
+      color: #a0a0a0;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* === MAIN SECTION === */
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+      z-index: 1;
+      position: relative;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #64ffda;
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    }
+
+    .project-card h3 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #aaa;
+      z-index: 1;
+      position: relative;
+    }
+
+    footer a {
+      color: #64ffda;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="stars"></div>
+
   <header>
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <h1>👨‍💻 Tulsiram Sahu</h1>
+    <p>Python Developer | Data Enthusiast | AI Learner</p>
   </header>
 
-  <section class="main">
-    <h2>Hello 👋, I'm Tulsiram</h2>
-    <p>Python Developer | AI & Web Automation Enthusiast</p>
+  <section>
+    <h2>🚀 My Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>📊 Gmail Extractor (Streamlit)</h3>
+        <p>Extracts and visualizes Gmail data using Python and Streamlit.</p>
+      </div>
+      <div class="project-card">
+        <h3>🤖 AI Chatbot</h3>
+        <p>A chatbot built using Gemini API with Streamlit interface.</p>
+      </div>
+      <div class="project-card">
+        <h3>📈 Pandas Data Analyzer</h3>
+        <p>Data cleaning and visualization tool built with Pandas & Matplotlib.</p>
+      </div>
+    </div>
   </section>
 
-  <footer>© 2025 Tulsiram Sahu</footer>
+  <footer>
+    <p>Connect with me on <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+  </footer>
 </body>
 </html>
